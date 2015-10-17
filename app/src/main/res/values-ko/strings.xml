@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">jolla-kernel A2DP Checker</string>
+    <string name="app_summary">이 앱은 jolla-kernel 과 작동합니다.\n\n이 앱은 블루투스 A2DP 재생 상태를 확인합니다.\n\nscroff_volctr 과 scroff_trackctr 이 음악이 정지 되었을 때 작동하지 않습니다.\n음악이 재생되면 다시 작동합니다.\n\n이 앱은 A2DP 를 지원하는 블루투스 기기들과 작동합니다.</string>
+</resources>
