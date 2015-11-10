@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">jolla-kernel A2DP Checker</string>
-    <string name="app_summary">This app working with jolla-kernel.\n\nThis app check Bluetooth A2DP playing state.\n\nscroff_volctr and scroff_trackctr will not working when music stopped.\nWorking again when playing music.\n\nThis app only working with A2DP support Bluetooth devices.</string>
+    <string name="app_summary">This app working with jolla-kernel.\n\nThis app check Bluetooth A2DP playing state.\n\nscroff_volctr will not working when music stopped.\nWorking again when playing music.\n\nThis app only working with A2DP support Bluetooth devices.</string>
 </resources>
