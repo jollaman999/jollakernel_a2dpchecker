@@ -11,7 +11,7 @@ import android.util.Log;
 
 public class Receiver extends BroadcastReceiver  {
 
-    private int PLAYING_CHECK_DELAY = 5000;
+    private int PLAYING_CHECK_DELAY = 2500;
 
     private static boolean is_playing = false;
     private final SOVC_TEMP_Handler mSOVC_TEMP_Handler = new SOVC_TEMP_Handler();
@@ -19,8 +19,6 @@ public class Receiver extends BroadcastReceiver  {
     @Override
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-
-        SOVC_TEMP_Switcher.check_permission();
 
         if (action.equals("android.bluetooth.a2dp.profile.action.PLAYING_STATE_CHANGED")) {
             if (intent.getIntExtra(BluetoothProfile.EXTRA_STATE, BluetoothA2dp.STATE_PLAYING)
