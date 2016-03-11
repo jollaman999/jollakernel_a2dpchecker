@@ -11,7 +11,7 @@ import android.util.Log;
 
 public class Receiver extends BroadcastReceiver  {
 
-    private int PLAYING_CHECK_DELAY = 2500;
+    private int PLAYING_CHECK_DELAY = 5000;
 
     private static boolean is_playing = false;
     private final SOVC_TEMP_Handler mSOVC_TEMP_Handler = new SOVC_TEMP_Handler();
