@@ -25,10 +25,18 @@ public class Receiver extends BroadcastReceiver  {
                 == BluetoothA2dp.STATE_PLAYING) {
                 is_playing = true;
                 SOVC_TEMP_Switcher.sovc_temp_switcher(1);
+                Log.i("jolla-kernelA2DPChecker", "SOVC Enabled. Reason: STATE_PLAYING");
             } else if (intent.getIntExtra(BluetoothProfile.EXTRA_STATE, BluetoothA2dp.STATE_PLAYING)
                     == BluetoothA2dp.STATE_NOT_PLAYING) {
                 is_playing = false;
                 SOVC_TEMP_Scheduler(PLAYING_CHECK_DELAY);
+            }
+        } else if (action.equals("android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED")) {
+            if (intent.getIntExtra(BluetoothProfile.EXTRA_STATE, BluetoothA2dp.STATE_CONNECTED)
+                    == BluetoothA2dp.STATE_DISCONNECTED) {
+                is_playing = false;
+                SOVC_TEMP_Switcher.sovc_temp_switcher(0);
+                Log.i("jolla-kernelA2DPChecker", "SOVC Temporary Disabled. Reason: STATE_DISCONNECTED");
             }
         }
     }
@@ -40,8 +48,7 @@ public class Receiver extends BroadcastReceiver  {
                 return;
             }
             SOVC_TEMP_Switcher.sovc_temp_switcher(0);
-
-            Log.i("jolla-kernelA2DPChecker", "SOVC Temporary Disabled.");
+            Log.i("jolla-kernelA2DPChecker", "SOVC Temporary Disabled. Reason: Timeout after STATE_NOT_PLAYING");
         }
     };
 
