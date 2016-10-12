@@ -1,8 +1,8 @@
 package com.jollaman999.jollakernel.a2dpchecker;
 
-public class SOVC_TEMP_Switcher {
+class SOVC_TEMP_Switcher {
 
-    public static void sovc_temp_switcher(int on){
+    static void sovc_temp_switcher(int on){
         Runtime runtime = Runtime.getRuntime();
         try{
             if(on == 1) {
