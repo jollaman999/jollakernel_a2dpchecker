@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.jollaman999.bluetootha2dp"
         minSdkVersion 23
-        targetSdkVersion 'O'
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
