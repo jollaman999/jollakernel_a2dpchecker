@@ -1,1 +1,1 @@
-[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"outputFile":{"path":"M:\\AndroidStudio\\jollakernel_a2dpchecker\\app\\release\\app-release.apk"},"properties":{"packageId":"com.jollaman999.bluetootha2dp","split":""}}]
+[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"app-release.apk","properties":{"packageId":"com.jollaman999.bluetootha2dp","split":"","minSdkVersion":"23"}}]
