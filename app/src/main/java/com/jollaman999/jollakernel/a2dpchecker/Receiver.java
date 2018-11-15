@@ -14,7 +14,7 @@ public class Receiver extends BroadcastReceiver  {
     int PLAYING_CHECK_DELAY = 5000;
 
     private static boolean is_playing = false;
-    private final SOVC_TEMP_Handler mSOVC_TEMP_Handler = new SOVC_TEMP_Handler();
+    // private final SOVC_TEMP_Handler mSOVC_TEMP_Handler = new SOVC_TEMP_Handler();
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -29,7 +29,8 @@ public class Receiver extends BroadcastReceiver  {
             } else if (intent.getIntExtra(BluetoothProfile.EXTRA_STATE, BluetoothA2dp.STATE_PLAYING)
                     == BluetoothA2dp.STATE_NOT_PLAYING) {
                 is_playing = false;
-                SOVC_TEMP_Scheduler(PLAYING_CHECK_DELAY);
+                // SOVC_TEMP_Scheduler(PLAYING_CHECK_DELAY);
+                SOVC_TEMP_Switcher.sovc_temp_switcher(0);
             }
         } else if (action.equals("android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED")) {
             if (intent.getIntExtra(BluetoothProfile.EXTRA_STATE, BluetoothA2dp.STATE_CONNECTED)
@@ -41,6 +42,7 @@ public class Receiver extends BroadcastReceiver  {
         }
     }
 
+    /*
     public static class SOVC_TEMP_Handler extends Handler {
         @Override
         public void handleMessage(Message msg) {
@@ -61,4 +63,5 @@ public class Receiver extends BroadcastReceiver  {
             }
         }, ms);
     }
+    */
 }
